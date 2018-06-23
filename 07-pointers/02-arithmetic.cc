@@ -17,9 +17,25 @@ int main(){
     // double* ptr_d = &y;
 
 
-    int* ptr = 0;
-    print(ptr);
-    print(*ptr);
+    // int* ptr;
+    // print(ptr);
+    // print(*ptr);
+
+    // 1D array
+    int arr[3] = {};
+    // print((&arr) + 1);  // ARRAY
+    // print(&arr);
+    // print(arr + 1);
+    // print(arr);
+    // int(*ptr)[3] = &arr;
+
+    // 2D array
+    int mat[2][3] = {};
+    // print(&mat);
+    // print(mat);
+    // print(mat[0]);
+    // print(&mat[0][0]);
+    int(*ptr)[3] = mat;
 
 
 }
