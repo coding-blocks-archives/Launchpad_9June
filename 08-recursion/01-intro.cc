@@ -153,8 +153,9 @@ int main() {
 
     // int n; cin >> n; printNum(n);
 
-    // int n; cin >> n; int ans = fibonacci(n);
-    // cout << ans;
+    int n; cin >> n; 
+    int ans = fibonacci(n);
+    cout << ans;
 
     // int arr[] = {1, 2, 3, 4}; int n = 4;
     // displayArrRev(arr, n);
@@ -171,14 +172,14 @@ int main() {
     // int ans = binarySearchRec(arr, 0, 4, 100);
     // cout << ans;
 
-    char board[10][10] = {}; int n; cin >> n;
-    inputMat(board, n, n);
-    bool ans = ratInMaze(board, 0, 0, n);
-    if (ans) {
-        outputMat(board, n, n);
-    }
-    else {
-        cout << "Dear Jerry, you will kill yourself!!!";
-    }
+    // char board[10][10] = {}; int n; cin >> n;
+    // inputMat(board, n, n);
+    // bool ans = ratInMaze(board, 0, 0, n);
+    // if (ans) {
+    //     outputMat(board, n, n);
+    // }
+    // else {
+    //     cout << "Dear Jerry, you will kill yourself!!!";
+    // }
 
 }
