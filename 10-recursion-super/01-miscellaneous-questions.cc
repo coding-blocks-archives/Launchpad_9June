@@ -62,9 +62,36 @@ int stepNo = 0;
 void tower(int n, char src, char dest, char helper) {
     if (n == 0) return;
     tower(n - 1, src, helper, dest);
-    cout << ++stepNo << ". " << n << ":" << src << "-->" << dest << endl; 
+    cout << ++stepNo << ". " << n << ":" << src << "-->" << dest << endl;
     tower(n - 1, helper, dest, src);
 
+}
+
+bool isPalindrome(char arr[], int be, int en) {
+    while (be < en) {
+        if (arr[be] != arr[en]) return false;
+        ++be; --en;
+    }
+    return true;
+}
+
+void printStr(char arr[], int be, int en) {
+    while (be <= en) { cout << arr[be]; be++; }
+}
+
+void palindromePartioning(char str[], int be) {
+    if (str[be] == '\0') {
+        cout << "-----" << endl;
+        return;
+    }
+
+    for (int i = be; str[i] != '\0'; ++i) {
+        if (isPalindrome(str, be, i)) {
+            printStr(str, be, i); // [be, i]
+            cout << endl;
+            palindromePartioning(str, i + 1);
+        }
+    }
 }
 
 
@@ -77,6 +104,9 @@ int main() {
     // printPermutations(arr, 0);
     // printCodes(arr, 0, tmp);
 
-    int n; cin >> n;
-    tower(n, 'A', 'B', 'C');
+    // int n; cin >> n;
+    // tower(n, 'A', 'B', 'C');
+
+    cin >> arr;
+    palindromePartioning(arr, 0);
 }
