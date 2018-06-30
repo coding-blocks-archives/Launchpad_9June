@@ -87,7 +87,9 @@ void palindromePartioning(char str[], int be) {
 
     for (int i = be; str[i] != '\0'; ++i) {
         if (isPalindrome(str, be, i)) {
-            printStr(str, be, i); // [be, i]
+            printStr(str, be, i); // [be, i]    
+            // THE PROGRAM IS CORRECT, DRAW THE RECURSION TREE TO UNDERSTAND THE OUTPUT
+            // OF THIS PROGRAM
             cout << endl;
             palindromePartioning(str, i + 1);
         }
