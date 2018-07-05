@@ -39,10 +39,26 @@ int partitonQsort(int arr[], int be, int en) {
     return be + j - 1;
 }
 
+int partitonQsort2(int arr[], int be, int en){
+    int pivotIndex = en;
+    int right = en;
+
+    for(int i = en - 1; i >= be; --i){
+        if (arr[i] > arr[pivotIndex]){
+            swap(arr[right], arr[i]);
+            if (right == pivotIndex) pivotIndex = i;
+            --right;
+        }
+    }
+    swap(arr[right], arr[pivotIndex]);
+    return right;
+}
+
+
 void quickSort(int arr[], int be, int en) {
     if (be > en) return;
 
-    int idx = partitonQsort(arr, be, en);
+    int idx = partitonQsort2(arr, be, en);
     quickSort(arr, be, idx - 1 );
     quickSort(arr, idx + 1, en);
 }
