@@ -135,10 +135,10 @@ int main() {
     h.insert("hij", 789);
     h.insert("lkm", 890);
     h.insert("zara", 123); 
-    h.insert("abc2", 123);
-    h.insert("def2", 456);
-    h.insert("hij2", 789);
-    h.insert("lkm2", 890);
-    h.insert("zara2", 123);
+    h.insert("abczy", 123);
+    h.insert("defzy", 456);
+    h.insert("hijzy", 789);
+    h.insert("lkmzy", 890);
+    h.insert("zarazy", 123);
     h.printTable();
 }
