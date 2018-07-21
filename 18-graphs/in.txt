@@ -1,0 +1,23 @@
+8 12
+1 5
+1 2
+1 8
+2 3
+2 6
+3 5
+3 4
+4 6
+4 7
+5 7
+6 8
+8 7
+
+7 8
+Delhi Paris
+Delhi Amsterdam
+Amsterdam Paris
+Amsterdam Japan
+Paris LA
+Japan Moscow
+Japan China
+Moscow China
