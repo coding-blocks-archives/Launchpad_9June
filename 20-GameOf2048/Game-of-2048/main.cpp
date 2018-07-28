@@ -1,6 +1,6 @@
-#include "mainwindow.h"
-#include <QApplication>
-
+//#include "mainwindow.h"
+//#include <QCoreApplication>
+#include <iostream>
 #include "main_charBased.h"
 
 int main(int argc, char *argv[])
@@ -9,6 +9,7 @@ int main(int argc, char *argv[])
 //    MainWindow w;
 //    w.show();
 
+      std::cout << "Hi";
       int status = mainForCharBased();
       return status;
 

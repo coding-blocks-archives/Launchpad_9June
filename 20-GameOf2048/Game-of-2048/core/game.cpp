@@ -9,20 +9,33 @@ Game::Game()
 }
 
 void Game::start(){
-    int boardDim = gameBoard->GetDimension();
-    for(int row = 0; row < boardDim; ++row){
-        for(int col = 0; col < boardDim; ++col){
-            Tile* curTile = gameBoard->GetTile(row, col);
-            if (curTile != nullptr){
-                std::cout << curTile->GetValue();
-            }
-            else {
-                std::cout << "XX";
-            }
-            std::cout << "\t";
-        }
-        std::cout << std::endl;
-    }
+    PrintGame();
+    move();
+}
 
+void Game::PrintGame(){
+    gameBoard->PrintBoard();
     std::cout << "The current score is " << score << std::endl;
+}
+
+void Game::move(){
+    std::cout << "Enter you Move ";
+    char choice;
+    std::cin >> choice;
+
+    switch(choice){
+    case 'u':
+        score += gameBoard->Move(UP);
+        break;
+    case 'd':
+        score += gameBoard->Move(DOWN);
+        break;
+    case 'l':
+        score += gameBoard->Move(LEFT);
+        break;
+    case 'r':
+        score += gameBoard->Move(RIGHT);
+        break;
+    }
+    PrintGame();
 }

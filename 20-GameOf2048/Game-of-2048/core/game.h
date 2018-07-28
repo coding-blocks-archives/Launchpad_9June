@@ -8,7 +8,8 @@ class Game
 public:
     Game();
     void start();
-
+    void move();
+    void PrintGame();
 private:
     Board* gameBoard;
     int score;
