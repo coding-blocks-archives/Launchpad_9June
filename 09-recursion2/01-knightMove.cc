@@ -1,12 +1,13 @@
 // Deepak Aggarwal, Coding Blocks
 // deepak@codingblocks.com
 #include <iostream>
+#include <iomanip>
 using namespace std;
 void outputMat(int mat[][100], int m, int n) {
     cout << "\n-----MAT Begins----\n";
     for (int r = 0; r < m; ++r) {
         for (int c = 0; c < n; ++c) {
-            cout << mat[r][c] << " ";
+            cout << setw(4) << mat[r][c] << " ";
         }
         cout << endl;
     }

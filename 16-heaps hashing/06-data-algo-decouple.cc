@@ -38,8 +38,8 @@ bool compareInt(int x, int y) {
     return x == y;
 }
 
-bool compareChar(char x, char y){
-    return x == y;
+bool compareChar(char x, char y)
+{    return x == y;
 }
 
 bool compareElephat(Elephant e1, Elephant e2){
