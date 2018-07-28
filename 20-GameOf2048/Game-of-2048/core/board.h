@@ -5,6 +5,7 @@
 #include "direction.h"
 
 #include <vector>
+#include <utility>
 
 class Board
 {
@@ -27,6 +28,11 @@ private:
     int moveTilesDownwards(int col);
     int moveTilesLeft(int row);
     int moveTilesRight(int row);
+    std::pair<int, int> getPosition();
+    void placeTile();
+    void initialiseBoard();
+
+
 };
 
 #endif // BOARD_H

@@ -1,5 +1,5 @@
 //#include "mainwindow.h"
-//#include <QCoreApplication>
+#include <QApplication>
 #include <iostream>
 #include "main_charBased.h"
 
@@ -9,7 +9,8 @@ int main(int argc, char *argv[])
 //    MainWindow w;
 //    w.show();
 
-      std::cout << "Hi";
+      freopen("in.txt", "r", stdin);
+
       int status = mainForCharBased();
       return status;
 

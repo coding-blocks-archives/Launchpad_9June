@@ -4,17 +4,13 @@
 #
 #-------------------------------------------------
 
-QT             += core
-QT             -= gui
+
+QT             += core gui
 QMAKE_CXXFLAGS += -std=c++11
 
-#greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = Game-of-2048
-
-CONFIG += console
-CONFIG   -= app_bundle
-
 TEMPLATE = app
 
 SOURCES += main.cpp\
@@ -34,3 +30,6 @@ HEADERS  += mainwindow.h \
     core/tile.h \
     core/direction.h \
     main_charBased.h
+
+OTHER_FILES += \
+    in.txt

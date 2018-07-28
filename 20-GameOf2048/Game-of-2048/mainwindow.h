@@ -1,15 +1,15 @@
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+//#ifndef MAINWINDOW_H
+//#define MAINWINDOW_H
 
-#include <QMainWindow>
+//#include <QMainWindow>
 
-class MainWindow : public QMainWindow
-{
-    Q_OBJECT
+//class MainWindow : public QMainWindow
+//{
+//    Q_OBJECT
 
-public:
-    MainWindow(QWidget *parent = 0);
-    ~MainWindow();
-};
+//public:
+//    MainWindow(QWidget *parent = 0);
+//    ~MainWindow();
+//};
 
-#endif // MAINWINDOW_H
+//#endif // MAINWINDOW_H

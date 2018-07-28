@@ -1,12 +1,34 @@
 #include "board.h"
 
 #include <iostream>
+#include <cstdlib>
 
 Board::Board()
 {
     dimension = 4;
     for(int i = 0; i < dimension; ++i){
         board.push_back(std::vector<Tile*>(4, nullptr));
+    }
+    initialiseBoard();
+}
+
+void Board::initialiseBoard(){
+    placeTile();
+    placeTile();
+}
+
+void Board::placeTile(){
+    std::pair<int, int> coord = getPosition();
+    board[coord.first][coord.second] = new Tile();
+}
+
+std::pair<int, int> Board::getPosition(){
+    while(true){
+        int x = rand() % dimension;
+        int y = rand() % dimension;
+        if (board[x][y] == nullptr){
+            return std::make_pair(x, y);
+        }
     }
 }
 
